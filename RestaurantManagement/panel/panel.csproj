@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3791626-F203-4916-A29E-6D7F0F8B7F44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>panel</RootNamespace>
+    <AssemblyName>panel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCampaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCampaign.Designer.cs">
+      <DependentUpon>AddCampaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbOperations\Common.cs" />
+    <Compile Include="formEren\ReviewDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\ReviewDelete.Designer.cs">
+      <DependentUpon>ReviewDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountAdd.Designer.cs">
+      <DependentUpon>formAccountAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountDelete.Designer.cs">
+      <DependentUpon>formAccountDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountingHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountingHome.designer.cs">
+      <DependentUpon>formAccountingHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAccountUpdate.Designer.cs">
+      <DependentUpon>formAccountUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\modelYusuf\Accounting.cs" />
+    <Compile Include="Yusuf\modelYusuf\Announcement.cs" />
+    <Compile Include="Yusuf\modelYusuf\Campaign.cs" />
+    <Compile Include="Yusuf\formYusuf\formACHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formACHome.designer.cs">
+      <DependentUpon>formACHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAnnouncementAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAnnouncementAdd.designer.cs">
+      <DependentUpon>formAnnouncementAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAnnouncementDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAnnouncementDelete.designer.cs">
+      <DependentUpon>formAnnouncementDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAnnouncementUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formAnnouncementUpdate.designer.cs">
+      <DependentUpon>formAnnouncementUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCampaignAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCampaignAdd.designer.cs">
+      <DependentUpon>formCampaignAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCampaignDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCampaignDelete.designer.cs">
+      <DependentUpon>formCampaignDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCampaignUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCampaignUpdate.designer.cs">
+      <DependentUpon>formCampaignUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEren\FeedBacks.cs" />
+    <Compile Include="formEren\FeedBackSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\FeedBackSQL.Designer.cs">
+      <DependentUpon>FeedBackSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\FeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\FeedBack.Designer.cs">
+      <DependentUpon>FeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\FoodShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\FoodShow.Designer.cs">
+      <DependentUpon>FoodShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="floors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="floors.Designer.cs">
+      <DependentUpon>floors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\PersonelAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\PersonelAdd.designer.cs">
+      <DependentUpon>PersonelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\PersonelUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\PersonelUpdate.designer.cs">
+      <DependentUpon>PersonelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\PersonelDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\PersonelDelete.Designer.cs">
+      <DependentUpon>PersonelDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\PersonelManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\PersonelManager.designer.cs">
+      <DependentUpon>PersonelManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\modelYusuf\Car.cs" />
+    <Compile Include="Yusuf\modelYusuf\dbMain.cs" />
+    <Compile Include="Yusuf\formYusuf\formCarAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarAdd.designer.cs">
+      <DependentUpon>formCarAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarDelete.designer.cs">
+      <DependentUpon>formCarDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarHome.designer.cs">
+      <DependentUpon>formCarHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yusuf\formYusuf\formCarUpdate.designer.cs">
+      <DependentUpon>formCarUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kamera.Designer.cs">
+      <DependentUpon>kamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="info.Designer.cs">
+      <DependentUpon>info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MediaPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MediaPlayer.Designer.cs">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ikinciform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ikinciform.Designer.cs">
+      <DependentUpon>ikinciform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ilkform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ilkform.Designer.cs">
+      <DependentUpon>ilkform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEren\dbHelper.cs" />
+    <Compile Include="ModelEren\Department.cs" />
+    <Compile Include="ModelEren\Employee.cs" />
+    <Compile Include="ModelEren\Food.cs" />
+    <Compile Include="ModelEren\FoodDesserts.cs" />
+    <Compile Include="ModelEren\Person.cs" />
+    <Compile Include="ModelEren\Register.cs" />
+    <Compile Include="motorcuKURYE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="motorcuKURYE.Designer.cs">
+      <DependentUpon>motorcuKURYE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="müsteri_takip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="müsteri_takip.Designer.cs">
+      <DependentUpon>müsteri_takip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paket_siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paket_siparis.Designer.cs">
+      <DependentUpon>paket_siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rezarvasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rezarvasyon.Designer.cs">
+      <DependentUpon>rezarvasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="siparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siparis.Designer.cs">
+      <DependentUpon>siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stok_takip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stok_takip.Designer.cs">
+      <DependentUpon>stok_takip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\YemekMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\YemekMenu.Designer.cs">
+      <DependentUpon>YemekMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEren\YemekMenuTatlilarcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEren\YemekMenuTatlilarcs.Designer.cs">
+      <DependentUpon>YemekMenuTatlilarcs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formEren\ReviewDelete.resx">
+      <DependentUpon>ReviewDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAccountAdd.resx">
+      <DependentUpon>formAccountAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAccountDelete.resx">
+      <DependentUpon>formAccountDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAccountingHome.resx">
+      <DependentUpon>formAccountingHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\FeedBackSQL.resx">
+      <DependentUpon>FeedBackSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\FeedBack.resx">
+      <DependentUpon>FeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="floors.resx">
+      <DependentUpon>floors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\FoodShow.resx">
+      <DependentUpon>FoodShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\PersonelAdd.resx">
+      <DependentUpon>PersonelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\PersonelUpdate.resx">
+      <DependentUpon>PersonelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\PersonelDelete.resx">
+      <DependentUpon>PersonelDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\PersonelManager.resx">
+      <DependentUpon>PersonelManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAccountUpdate.resx">
+      <DependentUpon>formAccountUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formACHome.resx">
+      <DependentUpon>formACHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAnnouncementAdd.resx">
+      <DependentUpon>formAnnouncementAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAnnouncementDelete.resx">
+      <DependentUpon>formAnnouncementDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formAnnouncementUpdate.resx">
+      <DependentUpon>formAnnouncementUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCampaignAdd.resx">
+      <DependentUpon>formCampaignAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCampaignDelete.resx">
+      <DependentUpon>formCampaignDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCampaignUpdate.resx">
+      <DependentUpon>formCampaignUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCarAdd.resx">
+      <DependentUpon>formCarAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCarDelete.resx">
+      <DependentUpon>formCarDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCarHome.resx">
+      <DependentUpon>formCarHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yusuf\formYusuf\formCarUpdate.resx">
+      <DependentUpon>formCarUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ikinciform.resx">
+      <DependentUpon>ikinciform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ilkform.resx">
+      <DependentUpon>ilkform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="info.resx">
+      <DependentUpon>info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kamera.resx">
+      <DependentUpon>kamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MediaPlayer.resx">
+      <DependentUpon>MediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="motorcuKURYE.resx">
+      <DependentUpon>motorcuKURYE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="müsteri_takip.resx">
+      <DependentUpon>müsteri_takip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paket_siparis.resx">
+      <DependentUpon>paket_siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rezarvasyon.resx">
+      <DependentUpon>rezarvasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="siparis.resx">
+      <DependentUpon>siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stok_takip.resx">
+      <DependentUpon>stok_takip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\YemekMenu.resx">
+      <DependentUpon>YemekMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEren\YemekMenuTatlilarcs.resx">
+      <DependentUpon>YemekMenuTatlilarcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant_menu_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMİNİ YENDİM.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KEBAP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Googleharitalar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yemeksepeti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yemeksepeti1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kampanya.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about us.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dbEREN\" />
+    <Folder Include="Yusuf\dbYusuf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_18px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_new_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_100px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
