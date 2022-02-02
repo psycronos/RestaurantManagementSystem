@@ -10,6 +10,6 @@
 
 
 ### The video links of Project
-https://www.youtube.com/watch?v=xh0W9GBBsb8&t=138s
-https://www.youtube.com/watch?v=mColONt5kQI
-https://www.youtube.com/watch?v=gKGvZLJWQvo&t=1s
+* https://www.youtube.com/watch?v=xh0W9GBBsb8&t=138s
+* https://www.youtube.com/watch?v=mColONt5kQI
+* https://www.youtube.com/watch?v=gKGvZLJWQvo&t=1s
